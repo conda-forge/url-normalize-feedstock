@@ -1,17 +1,17 @@
 {% set name = "url-normalize" %}
-{% set version = "1.4.3" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d23d3a070ac52a67b83a1c59a0e68f8608d1cd538783b401bc9de2c0fac999b2
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0f0b7cc95a95d2d9b0c9a51d47a326559bc05bd1558accdada21bb0c9504de85
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - six
+    - idna
 
 test:
   imports:
