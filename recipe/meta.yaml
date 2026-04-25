@@ -1,5 +1,5 @@
 {% set name = "url-normalize" %}
-{% set version = "2.2.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 74a540a3b6eba1d95bdc610c24f2c0141639f3ba903501e61a52a8730247ff37
+  sha256: 0552cbf2831a32a28994a13d29bca58a60e10ff6c0380e343ec6d1c2a0d232d8
 
 build:
   noarch: python
