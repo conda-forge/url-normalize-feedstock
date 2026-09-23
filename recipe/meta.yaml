@@ -1,13 +1,13 @@
 {% set name = "url-normalize" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0552cbf2831a32a28994a13d29bca58a60e10ff6c0380e343ec6d1c2a0d232d8
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 1655cd214159d9d47dc37aa6ce993c2149da44fa35cac6bafd90036a4eda3ac3
 
 build:
   noarch: python
