@@ -1,5 +1,5 @@
 {% set name = "url-normalize" %}
-{% set version = "3.1.0" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 138912833c0005ec77e756ec220590f8971ff046227280790ceb00f5ab9d56b6
+  sha256: 52ad9004d6278ea4b581f1cf2f4d016c4873bf3d81fd749b7472ac0206355d05
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
